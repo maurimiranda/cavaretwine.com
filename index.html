@@ -24,10 +24,21 @@
 
 </head>
 <body>
+  <header>…</header>
   <main>
-    <img src="logo_blanco.png" class="logo" />
+    <img src="logo_blanco.png" class="logo"/>
   </main>
+  <footer>
+    <button class="button" onclick="showMailingPopUp()">Quiero ser socio</button>
+  </footer>
+
   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-  <script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us7.list-manage.com","uuid":"0f8cd8e85df9d53c1f0dd0fba","lid":"dc7751894b","uniqueMethods":true}) })</script>
+  <script type="text/javascript">
+    function showMailingPopUp() {
+      window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us7.list-manage.com","uuid":"0f8cd8e85df9d53c1f0dd0fba","lid":"dc7751894b","uniqueMethods":true}) })
+      document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+      document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    };
+  </script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -8,16 +7,53 @@ html, body {
 body {
   display: flex;
   background: black;
+  flex-direction: column;
 }
 
 main {
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
 .logo {
-  width: 50%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 391px;
+  max-height: 102px;
+}
+
+.button {
+  background-color: #5a5a5a;
+  border: 0 none;
+  border-radius: 3px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  height: 36px;
+  letter-spacing: 0.01em;
+  line-height: 36px;
+  margin-right: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.button:hover {
+  background-color: #646060;
+  color: #FFFFFF;
 }
